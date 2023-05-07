@@ -1,0 +1,40 @@
+$fontFraunces: 'Fraunces', serif;
+$fontBarlow: 'Barlow', sans-serif;
+body{
+    font-family: $fontFraunces;
+}
+ p{
+    font-family: $fontBarlow;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;    
+    color: #FEFCF7;
+ }
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex{
+    @include flex;
+    &.start{
+        justify-content: start;
+    }
+    &.evenly{
+        justify-content: space-evenly;
+    }
+}
+@mixin btn {
+    padding: 15px 31px;
+    border: none;
+    background: #0E8784;
+    border-radius: 6px;
+    color: #fff;
+    font-family: $fontFraunces
+}
+.btn{
+    @include btn;
+}
